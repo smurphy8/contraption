@@ -1,0 +1,68 @@
+{-|
+
+
+
+Some sample things to try and make ...
+
+-------------------------------
+
+Single Well
+
+Cell Modem Polled Well Set
+
+Elynx Well Definition
+
+GCS Well
+
+Schlumberger Well
+
+------------------------------
+
+I think having a setting like default Maybe makes a lot of sense.
+
+* If DefaultOptional is turned on, then every field is actually assumed to be optional
+  I think it also makes sense to make this the default.
+
+  * So you would specify 'NoDefaultOptional' to turn it off
+
+  * perhaps even a UseOptionalMaybe, UserOptionalEither or something like that in the future
+
+
+* Stealing the typeclasses on Value in Data.Aeson leads me to some interesting stuff
+   Eq Value	 
+   Data Value	 
+   Show Value	 
+   Typeable Value	 
+   IsString Value	 
+   NFData Value	 
+   Hashable Value
+|-}
+
+
+OnpingTagCombined
+  location_id               Int   
+  slave_parameter_id        Int   
+  parameter_tag_id          Int   
+  description               Text    
+  unit_id                   Int    
+  status_active             Int    
+  status_writable           Int   
+  last_update               UTCTime 
+  result                    Text  
+  validation_code           Text  
+  permissions               Int   
+  delete                    Int   
+  companyIdRef		    Int   
+  siteIdRef                 Int   
+  location		    Location 
+  pid			    Int 
+
+Location 
+   siteIdRef Int
+   slaveId   Int 
+   refId     Int --same as location_id
+   name Text 
+   url Text 
+   delete   Int
+   companyIdRef Int
+
