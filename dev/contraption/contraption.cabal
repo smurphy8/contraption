@@ -1,5 +1,5 @@
 Name:                   contraption
-Version:                0.1.0
+Version:                0.1.1
 Author:                 Scott <scott.murphy@plowtech.net>
 Maintainer:             Scott <scott.murphy@plowtech.net>
 License:                BSD3
@@ -14,15 +14,17 @@ Library
   HS-Source-Dirs:       src
   GHC-Options:          -Wall
   Exposed-Modules:      Language.Contraption
+                        Language.Contraption.Types
   Other-Modules:        Language.Contraption.Internal
   Build-Depends:        base >= 4 && < 5
-                      , lens
-                      , pipes
                       , system-filepath
-                      , filesystem
-                      , aeson  >= 0.7.0 && < 0.8.0
-                        
-                        
+                      , aeson
+                      , trifecta
+                      , validation
+                      , vinyl                                  
+                      , singletons                                 
+                      , basic-prelude             
+                      , template-haskell           
 
 Test-Suite spec
   Type:                 exitcode-stdio-1.0
@@ -32,13 +34,15 @@ Test-Suite spec
   Ghc-Options:          -Wall
   Main-Is:              Spec.hs
   Build-Depends:        base
+                      , basic-prelude
                       , hspec
                       , lens
-                      , pipes
-                      , system-filepath
-                      , filesystem
-                      , aeson  >= 0.7.0 && < 0.8.0
-                        
+                      , system-filepath                      
+                      , trifecta
+                      , validation
+                      , vinyl                                  
+                      , singletons
+                      , template-haskell                                                         
 
 
 Source-Repository head
