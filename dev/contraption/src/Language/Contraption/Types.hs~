@@ -1,0 +1,20 @@
+
+
+{- |
+Module      :  Contraption.Types
+Description :  Contraption.Types 
+Copyright   :  (c) Plow Technologies
+License     :  MIT License
+Maintainer  :  Scott Murphy
+Stability   :  unstable 
+Portability :   non-portable (System.Posix)
+
+
+-}
+
+
+{-# LANGUAGE OverloadedStrings #-}
+
+module Contraption.Types () where
+
+
