@@ -36,7 +36,7 @@ the `in` constraint must have all it's constraints satisfied on the record in qu
 tag = LocalTag
 
 ```
-## Example Constrations
+## Example Constraints
 Location
   LocationId
   OTCList
